@@ -2,7 +2,7 @@ package transposer
 
 import "fmt"
 
-func transpose(chord string) string {
-	message := fmt.Sprintf("given cord\n %v!", chord)
+func Transpose(chord string, t int) string {
+	message := fmt.Sprintf("given cord\n %v\ngiven t:%v", chord, t)
 	return message
 }
