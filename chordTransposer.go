@@ -120,9 +120,9 @@ func getChordNameByValue(value int) string {
 
 func getChordRoot(chord string) (string, string) {
 	if len(chord) > 1 && (chord[1:2] == "b" || chord[1:2] == "#") {
-		return chord[0:2], chord[2:len(chord)]
+		return chord[0:2], chord[2:]
 	}
-	return chord[0:1], chord[1:len(chord)]
+	return chord[0:1], chord[1:]
 }
 
 func formatChordsInLine(line string, format string) string {
