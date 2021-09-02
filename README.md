@@ -3,10 +3,19 @@ Chord transposer for Golang.
 It will detect chords inside multiline string(Song guitar chords) then replace the chords given string, if you want, it will transpose chords too.
 
 # Install
-`$ go get github.com/halilcagriakkuzu/go-chord-transposer@upgrade`
+To install latest version
+```bash
+go get github.com/halilcagriakkuzu/go-chord-transposer@upgrade
+```
+If you want spesific version you can get like this
+```bash
+go get github.com/halilcagriakkuzu/go-chord-transposer@v1
+# Or
+go get github.com/halilcagriakkuzu/go-chord-transposer@v1.0.0
+```
 
 ## Simple Example
-```
+```go
 package main
 
 import (
@@ -20,9 +29,9 @@ func main() {
 }
 ```
 
-## TransposeChords(song string, transposeValue int, format string)
-### Param1 : song
-```
+## How to use
+### TransposeChords(song string, transposeValue int, format string) : song
+```go
 // You can pass whole song in multi line string, it will detect the chord lines automatically
 song := `
 [Verse 1]
@@ -54,8 +63,8 @@ Whoa, Oh, Oh, Oh Sweet love o' mine
 chordTransposer.TransposeChords(song, 0, "%v")
 ```
 
-### Param2 : transposeValue
-```
+### TransposeChords(song string, transposeValue int, format string) : transposeValue
+```go
 // You can give integer value for transpose, between -11,+11
 chordTransposer.TransposeChords("Em", 1, "%v")
 // output : Fm
@@ -63,8 +72,8 @@ chordTransposer.TransposeChords("Em", -2, "%v")
 // output : Dm
 ```
 
-### Param3 : formatString
-```
+### TransposeChords(song string, transposeValue int, format string) : formatString
+```go
 // You can use %v for chord string and put anything you want. If you don't want to format, just use "%v"
 chordTransposer.TransposeChords("Em", 0, "%v")
 // output : Em
